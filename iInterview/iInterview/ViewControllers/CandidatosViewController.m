@@ -45,7 +45,7 @@
                                   _lblTitulo.frame.size.width,
                                   _lblTitulo.frame.size.height);
 
-    [UIView animateWithDuration:0.0
+    [UIView animateWithDuration:1.0
                           delay:0
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{                          _lblTitulo.frame = CGRectMake(_lblTitulo.frame.origin.x,
