@@ -34,15 +34,15 @@ Avalie seu conhecimento de 0 a 10 nos seguintes itens (Campos opcionais):
 Após preencher o formulário o candidato deverá receber um e-mail de acordo com suas respostas.
 
 - Caso o candidato tenha entre 7 e 10 pontos para HTML, CSS e Javascript deverá ser enviado o "E-mail Front-End";
-- 
+
 - Caso o candidato tenha entre 7 e 10 pontos para Python e Django deverá ser enviado o "E-mail Back-End”;
-- 
+
 - Caso o candidato tenha entre 7 e 10 pontos para desenvolvimento iOS ou Android deverá ser enviado o "E-mail Mobile”;
-- 
+
 - Caso ele atinja mais de um dos critérios acima deverá ser enviado um e-mail para cada um dos critérios que ele passou;
-- 
+
 - Caso ele não entre em nenhum dos critérios acima deverá ser enviado o “E-mail Genérico”.
-- 
+
 
 E-mail Front-End:
 
