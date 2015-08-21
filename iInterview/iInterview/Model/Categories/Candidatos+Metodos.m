@@ -33,6 +33,8 @@
     if (candidato == nil) {
         return FALSE;
     }
+    
+    [candidato apagarConhecimentosCandidato ];
 
     [[[CoreDataManager sharedManager] managedObjectContext] deleteObject:candidato];
 
@@ -82,5 +84,15 @@
     return fltMedia;
 }
 
+- (void)apagarConhecimentosCandidato
+{
+    NSArray *conhecimentos = [CandidatoConhecimento buscarArrayTodosConhecimentosdoCandidato:self];
+    if (conhecimentos.count > 0){
+        for (int i = 0; i < conhecimentos.count; i++){
+            CandidatoConhecimento *candidatoConhecimento = [conhecimentos objectAtIndex:i];
+            [CandidatoConhecimento apagarCandidato:self comConhecimento:candidatoConhecimento.conhecimento];
+        }
+    }
+}
 
 @end

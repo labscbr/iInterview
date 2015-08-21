@@ -207,17 +207,15 @@
     if (_txtNome.text.length <= 0){
         [[Utils shared] mostrarAlerta:@"É obrigatório digitar o seu nome!"];
     } else if ([[Utils shared] validarEmail:_txtEmail.text] == FALSE){
-        [[Utils shared] mostrarAlerta:@"É obrigatório digitar o seu e-mail válido!"];
+        [[Utils shared] mostrarAlerta:@"É obrigatório digitar um e-mail válido!"];
     } else {
         _candidatoAtual = [Candidatos adicionarCandidato:_txtNome.text comEmail:_txtEmail.text];
+        [self criarEntrevista];
+        
+        //vai para a primeira página
+        _intPageAtual = 0;
+        [self avancarEntrevista:nil];
     }
-    
-    [self criarEntrevista];
-    
-    //vai para a primeira página
-    _intPageAtual = 0;
-    [self avancarEntrevista:nil];
-    
 }
 
 - (IBAction)cancelar:(id)sender

@@ -112,5 +112,17 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        Candidatos *candidato = [_nsfrcCandidatos objectAtIndexPath:indexPath];
+        [Candidatos apagarCandidato:candidato.strEmail];
+        // Delete the row from the data source
+        //        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        _nsfrcCandidatos = [Candidatos buscarTodosCandidatos];
+        [tableView reloadData];
+    } 
+}
 
 @end
