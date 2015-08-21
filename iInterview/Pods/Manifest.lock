@@ -1,0 +1,13 @@
+PODS:
+  - DDPageControl (0.1)
+  - MDRadialProgress (1.3.2)
+
+DEPENDENCIES:
+  - DDPageControl
+  - MDRadialProgress
+
+SPEC CHECKSUMS:
+  DDPageControl: 60c7d350477922b1e67fcf927f7e50eddc7dd207
+  MDRadialProgress: 1068574b9b4b870f64b605b07f734385bde5104d
+
+COCOAPODS: 0.38.2

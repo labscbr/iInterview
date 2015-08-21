@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8175.2" systemVersion="15A244d" minimumToolsVersion="Automatic">
+    <entity name="CandidatoConhecimento" representedClassName="CandidatoConhecimento" syncable="YES">
+        <attribute name="intPontuacao" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="candidato" maxCount="1" deletionRule="Nullify" destinationEntity="Candidatos" inverseName="conhecimento" inverseEntity="Candidatos" syncable="YES"/>
+        <relationship name="conhecimento" maxCount="1" deletionRule="Nullify" destinationEntity="Conhecimentos" inverseName="candidato" inverseEntity="Conhecimentos" syncable="YES"/>
+    </entity>
+    <entity name="Candidatos" representedClassName="Candidatos" syncable="YES">
+        <attribute name="strEmail" attributeType="String" syncable="YES"/>
+        <attribute name="strNome" attributeType="String" syncable="YES"/>
+        <relationship name="conhecimento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CandidatoConhecimento" inverseName="candidato" inverseEntity="CandidatoConhecimento" syncable="YES"/>
+    </entity>
+    <entity name="Conhecimentos" representedClassName="Conhecimentos" syncable="YES">
+        <attribute name="strConhecimento" attributeType="String" syncable="YES"/>
+        <relationship name="candidato" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CandidatoConhecimento" inverseName="conhecimento" inverseEntity="CandidatoConhecimento" syncable="YES"/>
+        <relationship name="grupoConhecimento" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GrupoConhecimentos" inverseName="conhecimento" inverseEntity="GrupoConhecimentos" syncable="YES"/>
+    </entity>
+    <entity name="GrupoConhecimentos" representedClassName="GrupoConhecimentos" syncable="YES">
+        <attribute name="strGrupoConhecimento" attributeType="String" syncable="YES"/>
+        <relationship name="conhecimento" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conhecimentos" inverseName="grupoConhecimento" inverseEntity="Conhecimentos" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CandidatoConhecimento" positionX="-380" positionY="-9" width="164" height="88"/>
+        <element name="Candidatos" positionX="-612" positionY="-9" width="128" height="90"/>
+        <element name="Conhecimentos" positionX="-128" positionY="-12" width="128" height="88"/>
+        <element name="GrupoConhecimentos" positionX="88" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>

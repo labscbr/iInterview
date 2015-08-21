@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+
+target 'iInterview' do
+
+pod 'DDPageControl'
+pod 'MDRadialProgress'
+
+end
+
+target 'iInterviewTests' do
+
+end
+

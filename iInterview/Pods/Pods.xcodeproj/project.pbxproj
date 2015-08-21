@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AE2B1BFDA4F4A05D24F940D8258EDBF /* MDRadialProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3699FF8117F9A42F29287DFB08611663 /* MDRadialProgressLabel.m */; };
+		1CF8C8C063E53AC8D82BEFEA3010FE0C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28B9973D90A4D101A4185D95D84B158 /* QuartzCore.framework */; };
+		1ED9923BE9961D62F1A66B3ECD4475A2 /* MDRadialProgressTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4FE5E76870D3780EDEB785C4B80C4E /* MDRadialProgressTheme.m */; };
+		24506801D5CFA5AD908505D90E3C74F4 /* MDRadialProgressLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7939D51042642229E61302B55F9C6405 /* MDRadialProgressLabel.h */; };
+		284DD4136F3E3785962C5086007111B6 /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D8636ABC480D48CF39908FA2F61B3F8F /* DDPageControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		356D8C0877F459CDEF1342EF0071328D /* Pods-iInterview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585F5DFFA390445BC7B0B7486F711EF /* Pods-iInterview-dummy.m */; };
+		42A92C5CE0715F15571F3F27BCDEEA9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4074601C1F357CB61784B1B230473059 /* Foundation.framework */; };
+		656D0FF8ACBB9ED736355739E6FA569D /* DDPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0B2E2506D339AE141073F44C10D95B /* DDPageControl.h */; };
+		6BB6DA899A2BEEDD795DA956BF8CDA7F /* DDPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E8D08CE559F7812E960BDCD93E3F1 /* DDPageControl-dummy.m */; };
+		8C4A48116B27922B5597EFEE7476BEC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4074601C1F357CB61784B1B230473059 /* Foundation.framework */; };
+		91893AE4B3CF0BB598F8407C0E160978 /* MDRadialProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 032BC85135B2D2475C819D09E08249FD /* MDRadialProgressView.h */; };
+		9B9E7CE7FDAD468211A29DC8C6491FC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4074601C1F357CB61784B1B230473059 /* Foundation.framework */; };
+		9C0A021D0E5FB0914572F2C8F45A6CDD /* MDRadialProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9FA792E50EB6FBC0E3F2AEC92ED57E9 /* MDRadialProgress-dummy.m */; };
+		A660B2B8FE82EB068721CA5B0252DEFE /* MDRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFC11E251C956CAA0E11BA755EA76B5 /* MDRadialProgressView.m */; };
+		B2D0216083CB0B3F97638FE3387CF5B3 /* MDRadialProgressTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80E0CB66758E56FB2708443CE064D8 /* MDRadialProgressTheme.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C3F13D9A4A77305B3F58758E6DAE23E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF6025F514D93C631642D6779D35C9D0;
+			remoteInfo = MDRadialProgress;
+		};
+		F19C3DA4E1F962E60DDC6D703C261920 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDAC3A94FD89FD6421586B44634FBAD;
+			remoteInfo = DDPageControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032BC85135B2D2475C819D09E08249FD /* MDRadialProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDRadialProgressView.h; path = MDRadialProgress/MDRadialProgress/MDRadialProgressView.h; sourceTree = "<group>"; };
+		0A0B2E2506D339AE141073F44C10D95B /* DDPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDPageControl.h; path = Classes/DDPageControl.h; sourceTree = "<group>"; };
+		0FE10B72B2FBEDA9C960BC90D17099FC /* Pods-iInterview-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iInterview-resources.sh"; sourceTree = "<group>"; };
+		2C9B47D18507CB4C449487A25539E4C4 /* MDRadialProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MDRadialProgress-prefix.pch"; sourceTree = "<group>"; };
+		3699FF8117F9A42F29287DFB08611663 /* MDRadialProgressLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDRadialProgressLabel.m; path = MDRadialProgress/MDRadialProgress/MDRadialProgressLabel.m; sourceTree = "<group>"; };
+		4074601C1F357CB61784B1B230473059 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E73D79EA9C989A481997D9346355E2C /* MDRadialProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MDRadialProgress.xcconfig; sourceTree = "<group>"; };
+		533229E74E0D45F1E494388D4D44EF5E /* libPods-iInterview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iInterview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		629B6EBF68A9407EAC9AC4918EF745D3 /* Pods-iInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iInterview.release.xcconfig"; sourceTree = "<group>"; };
+		6585F5DFFA390445BC7B0B7486F711EF /* Pods-iInterview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iInterview-dummy.m"; sourceTree = "<group>"; };
+		78883EA6B669DCDB7EB11D7B91B911F2 /* libMDRadialProgress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMDRadialProgress.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939D51042642229E61302B55F9C6405 /* MDRadialProgressLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDRadialProgressLabel.h; path = MDRadialProgress/MDRadialProgress/MDRadialProgressLabel.h; sourceTree = "<group>"; };
+		7C8C9090A86A4DCC36B70D99BAC93B55 /* MDRadialProgress-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MDRadialProgress-Private.xcconfig"; sourceTree = "<group>"; };
+		839F32F8077E3BDD32ED2BC536B9398F /* DDPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DDPageControl.xcconfig; sourceTree = "<group>"; };
+		A28B9973D90A4D101A4185D95D84B158 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AA84CE375F401827B8506A20FED20F4F /* DDPageControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DDPageControl-Private.xcconfig"; sourceTree = "<group>"; };
+		ABFC11E251C956CAA0E11BA755EA76B5 /* MDRadialProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDRadialProgressView.m; path = MDRadialProgress/MDRadialProgress/MDRadialProgressView.m; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C26E8D08CE559F7812E960BDCD93E3F1 /* DDPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DDPageControl-dummy.m"; sourceTree = "<group>"; };
+		C98539928C98BBA152C47AA591C66C6C /* libDDPageControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDPageControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7E9B0B077D6C75197FC5E74B5F1985 /* Pods-iInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iInterview.debug.xcconfig"; sourceTree = "<group>"; };
+		D474F0349CD2FA7FF6D35EAA81B3DCBC /* Pods-iInterview-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iInterview-acknowledgements.plist"; sourceTree = "<group>"; };
+		D8636ABC480D48CF39908FA2F61B3F8F /* DDPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDPageControl.m; path = Classes/DDPageControl.m; sourceTree = "<group>"; };
+		D9FA792E50EB6FBC0E3F2AEC92ED57E9 /* MDRadialProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MDRadialProgress-dummy.m"; sourceTree = "<group>"; };
+		E3202DD8B1ADCA95AFA274C88E33F881 /* Pods-iInterview-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iInterview-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EA80E0CB66758E56FB2708443CE064D8 /* MDRadialProgressTheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDRadialProgressTheme.h; path = MDRadialProgress/MDRadialProgress/MDRadialProgressTheme.h; sourceTree = "<group>"; };
+		F545A8EF46FFA6EA4A015EE4F17A9CEB /* DDPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDPageControl-prefix.pch"; sourceTree = "<group>"; };
+		FE4FE5E76870D3780EDEB785C4B80C4E /* MDRadialProgressTheme.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDRadialProgressTheme.m; path = MDRadialProgress/MDRadialProgress/MDRadialProgressTheme.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86A81C5ED0884C3B42C76AB3B43F7A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B9E7CE7FDAD468211A29DC8C6491FC5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D36332332D6E2C108691A43A01F3652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4A48116B27922B5597EFEE7476BEC6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8789156155CDE4245ED64B632D3700F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A92C5CE0715F15571F3F27BCDEEA9A /* Foundation.framework in Frameworks */,
+				1CF8C8C063E53AC8D82BEFEA3010FE0C /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00FC04B06EEF8A155D545C321FDCC389 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4074601C1F357CB61784B1B230473059 /* Foundation.framework */,
+				A28B9973D90A4D101A4185D95D84B158 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00FC04B06EEF8A155D545C321FDCC389 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B236EFE0253D6EF977C913CBA4806D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E73D79EA9C989A481997D9346355E2C /* MDRadialProgress.xcconfig */,
+				7C8C9090A86A4DCC36B70D99BAC93B55 /* MDRadialProgress-Private.xcconfig */,
+				D9FA792E50EB6FBC0E3F2AEC92ED57E9 /* MDRadialProgress-dummy.m */,
+				2C9B47D18507CB4C449487A25539E4C4 /* MDRadialProgress-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MDRadialProgress";
+			sourceTree = "<group>";
+		};
+		68DC4F824FC0B730236368C3302C89D5 /* MDRadialProgress */ = {
+			isa = PBXGroup;
+			children = (
+				7939D51042642229E61302B55F9C6405 /* MDRadialProgressLabel.h */,
+				3699FF8117F9A42F29287DFB08611663 /* MDRadialProgressLabel.m */,
+				EA80E0CB66758E56FB2708443CE064D8 /* MDRadialProgressTheme.h */,
+				FE4FE5E76870D3780EDEB785C4B80C4E /* MDRadialProgressTheme.m */,
+				032BC85135B2D2475C819D09E08249FD /* MDRadialProgressView.h */,
+				ABFC11E251C956CAA0E11BA755EA76B5 /* MDRadialProgressView.m */,
+				4B236EFE0253D6EF977C913CBA4806D8 /* Support Files */,
+			);
+			path = MDRadialProgress;
+			sourceTree = "<group>";
+		};
+		6B091960399B827A1C26E572B539D221 /* Pods-iInterview */ = {
+			isa = PBXGroup;
+			children = (
+				E3202DD8B1ADCA95AFA274C88E33F881 /* Pods-iInterview-acknowledgements.markdown */,
+				D474F0349CD2FA7FF6D35EAA81B3DCBC /* Pods-iInterview-acknowledgements.plist */,
+				6585F5DFFA390445BC7B0B7486F711EF /* Pods-iInterview-dummy.m */,
+				0FE10B72B2FBEDA9C960BC90D17099FC /* Pods-iInterview-resources.sh */,
+				CD7E9B0B077D6C75197FC5E74B5F1985 /* Pods-iInterview.debug.xcconfig */,
+				629B6EBF68A9407EAC9AC4918EF745D3 /* Pods-iInterview.release.xcconfig */,
+			);
+			name = "Pods-iInterview";
+			path = "Target Support Files/Pods-iInterview";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				E44938E09A5514F9CBE5D1C91A01A6B9 /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				FA8B94E961312A7B8CEEDA606A0F36FD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C3CCBC185E6C6543562083EC187692E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				839F32F8077E3BDD32ED2BC536B9398F /* DDPageControl.xcconfig */,
+				AA84CE375F401827B8506A20FED20F4F /* DDPageControl-Private.xcconfig */,
+				C26E8D08CE559F7812E960BDCD93E3F1 /* DDPageControl-dummy.m */,
+				F545A8EF46FFA6EA4A015EE4F17A9CEB /* DDPageControl-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DDPageControl";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C98539928C98BBA152C47AA591C66C6C /* libDDPageControl.a */,
+				78883EA6B669DCDB7EB11D7B91B911F2 /* libMDRadialProgress.a */,
+				533229E74E0D45F1E494388D4D44EF5E /* libPods-iInterview.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E44938E09A5514F9CBE5D1C91A01A6B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC2ED2834F409774940404374DEFE3FF /* DDPageControl */,
+				68DC4F824FC0B730236368C3302C89D5 /* MDRadialProgress */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC2ED2834F409774940404374DEFE3FF /* DDPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				0A0B2E2506D339AE141073F44C10D95B /* DDPageControl.h */,
+				D8636ABC480D48CF39908FA2F61B3F8F /* DDPageControl.m */,
+				C3CCBC185E6C6543562083EC187692E1 /* Support Files */,
+			);
+			path = DDPageControl;
+			sourceTree = "<group>";
+		};
+		FA8B94E961312A7B8CEEDA606A0F36FD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B091960399B827A1C26E572B539D221 /* Pods-iInterview */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		279239D38A6FABCE16D3D02BABEB0522 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656D0FF8ACBB9ED736355739E6FA569D /* DDPageControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		724D913296A9C6A6952024241952E29C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24506801D5CFA5AD908505D90E3C74F4 /* MDRadialProgressLabel.h in Headers */,
+				B2D0216083CB0B3F97638FE3387CF5B3 /* MDRadialProgressTheme.h in Headers */,
+				91893AE4B3CF0BB598F8407C0E160978 /* MDRadialProgressView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23BBC3619494FE5444CDB6F3089DAE29 /* Pods-iInterview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E42846A250B7C9E83337FAE66607402 /* Build configuration list for PBXNativeTarget "Pods-iInterview" */;
+			buildPhases = (
+				3B9034B0B402C43E2F5BA3FB9DB68117 /* Sources */,
+				9D36332332D6E2C108691A43A01F3652 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4289AAC42C73AC27F10493E760CDBD0B /* PBXTargetDependency */,
+				218986581755332BDB6F78C115E0FC25 /* PBXTargetDependency */,
+			);
+			name = "Pods-iInterview";
+			productName = "Pods-iInterview";
+			productReference = 533229E74E0D45F1E494388D4D44EF5E /* libPods-iInterview.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CEDAC3A94FD89FD6421586B44634FBAD /* DDPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FF9F8D4808B44A80DE00306E3C771A /* Build configuration list for PBXNativeTarget "DDPageControl" */;
+			buildPhases = (
+				5FA219641E7A86E5E30D4262C0795688 /* Sources */,
+				86A81C5ED0884C3B42C76AB3B43F7A7E /* Frameworks */,
+				279239D38A6FABCE16D3D02BABEB0522 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDPageControl;
+			productName = DDPageControl;
+			productReference = C98539928C98BBA152C47AA591C66C6C /* libDDPageControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CF6025F514D93C631642D6779D35C9D0 /* MDRadialProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F0C41EE8BD2033F3E39B00A85514B37 /* Build configuration list for PBXNativeTarget "MDRadialProgress" */;
+			buildPhases = (
+				E466998611214C4DBF9C8102AF3776B2 /* Sources */,
+				C8789156155CDE4245ED64B632D3700F /* Frameworks */,
+				724D913296A9C6A6952024241952E29C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDRadialProgress;
+			productName = MDRadialProgress;
+			productReference = 78883EA6B669DCDB7EB11D7B91B911F2 /* libMDRadialProgress.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDAC3A94FD89FD6421586B44634FBAD /* DDPageControl */,
+				CF6025F514D93C631642D6779D35C9D0 /* MDRadialProgress */,
+				23BBC3619494FE5444CDB6F3089DAE29 /* Pods-iInterview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B9034B0B402C43E2F5BA3FB9DB68117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356D8C0877F459CDEF1342EF0071328D /* Pods-iInterview-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FA219641E7A86E5E30D4262C0795688 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BB6DA899A2BEEDD795DA956BF8CDA7F /* DDPageControl-dummy.m in Sources */,
+				284DD4136F3E3785962C5086007111B6 /* DDPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E466998611214C4DBF9C8102AF3776B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C0A021D0E5FB0914572F2C8F45A6CDD /* MDRadialProgress-dummy.m in Sources */,
+				1AE2B1BFDA4F4A05D24F940D8258EDBF /* MDRadialProgressLabel.m in Sources */,
+				1ED9923BE9961D62F1A66B3ECD4475A2 /* MDRadialProgressTheme.m in Sources */,
+				A660B2B8FE82EB068721CA5B0252DEFE /* MDRadialProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		218986581755332BDB6F78C115E0FC25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MDRadialProgress;
+			target = CF6025F514D93C631642D6779D35C9D0 /* MDRadialProgress */;
+			targetProxy = 6C3F13D9A4A77305B3F58758E6DAE23E /* PBXContainerItemProxy */;
+		};
+		4289AAC42C73AC27F10493E760CDBD0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DDPageControl;
+			target = CEDAC3A94FD89FD6421586B44634FBAD /* DDPageControl */;
+			targetProxy = F19C3DA4E1F962E60DDC6D703C261920 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D8F1147CF066CB73E4F6EA3C50596E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629B6EBF68A9407EAC9AC4918EF745D3 /* Pods-iInterview.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1CE42916B850C1708E2ECD716D625B40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C8C9090A86A4DCC36B70D99BAC93B55 /* MDRadialProgress-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MDRadialProgress/MDRadialProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		60031E2CAC509B572962A0196D60441E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA84CE375F401827B8506A20FED20F4F /* DDPageControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DDPageControl/DDPageControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6E13E08D566802BE34251A204889B071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD7E9B0B077D6C75197FC5E74B5F1985 /* Pods-iInterview.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81436874584DD606E62C8BF77F2E3E45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA84CE375F401827B8506A20FED20F4F /* DDPageControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DDPageControl/DDPageControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9FF49393B03F79B6C4637C3D5F5E8ED9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C8C9090A86A4DCC36B70D99BAC93B55 /* MDRadialProgress-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MDRadialProgress/MDRadialProgress-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18FF9F8D4808B44A80DE00306E3C771A /* Build configuration list for PBXNativeTarget "DDPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81436874584DD606E62C8BF77F2E3E45 /* Debug */,
+				60031E2CAC509B572962A0196D60441E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E42846A250B7C9E83337FAE66607402 /* Build configuration list for PBXNativeTarget "Pods-iInterview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E13E08D566802BE34251A204889B071 /* Debug */,
+				0D8F1147CF066CB73E4F6EA3C50596E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F0C41EE8BD2033F3E39B00A85514B37 /* Build configuration list for PBXNativeTarget "MDRadialProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE42916B850C1708E2ECD716D625B40 /* Debug */,
+				9FF49393B03F79B6C4637C3D5F5E8ED9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
