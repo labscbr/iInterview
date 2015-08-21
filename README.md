@@ -46,29 +46,28 @@ Após preencher o formulário o candidato deverá receber um e-mail de acordo co
 
 E-mail Front-End:
 
-Assunto:  
-Obrigado por se candidatar
-Conteúdo: 
-Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Front-End entraremos em contato.
+Assunto:  Obrigado por se candidatar
+
+Conteúdo: Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Front-End entraremos em contato.
 
 E-mail Back-End:
 
-Assunto:  
-Obrigado por se candidatar
-Conteúdo: 
-Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Back-End entraremos em contato.
+Assunto:  Obrigado por se candidatar
+
+Conteúdo: Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Back-End entraremos em contato.
+
 
 E-mail Mobile:
 
-Assunto:  
-Obrigado por se candidatar
-Conteúdo:
-Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Mobile entraremos em contato.
+Assunto:Obrigado por se candidatar
+
+Conteúdo:Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador Mobile entraremos em contato.
+
 
 E-mail Genérico:
 
-Assunto:  
-Obrigado por se candidatar
-Conteúdo: 
-Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador entraremos em contato.
+Assunto: Obrigado por se candidatar
+
+Conteúdo: Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador entraremos em contato.
+
 
