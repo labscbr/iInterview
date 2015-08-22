@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIView *viewFundo2;
 
 @property (weak, nonatomic) Candidatos *candidato;
+@property (assign, nonatomic) int intGrupoConhecimento;
 
-- (void)desenharGraficos;
+- (void)desenharGraficosComFiltro:(int)intFiltro;
 
 @end

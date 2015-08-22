@@ -63,8 +63,11 @@
 }
 
 - (void)viewDidUnload {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super viewDidUnload];
+}
+ - (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)viewDidLayoutSubviews
@@ -189,37 +192,46 @@
 # pragma mark -
 # pragma mark ScrollView Delegate
 
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-}
-
--(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
-//    int page = _scrvEntrevista.contentOffset.x/_scrvEntrevista.frame.size.width;
-//    _pageControl.currentPage = page;
-}
+//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+//}
+//
+//-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+//{
+////    int page = _scrvEntrevista.contentOffset.x/_scrvEntrevista.frame.size.width;
+////    _pageControl.currentPage = page;
+//}
 
 # pragma mark -
 # pragma mark Botoes e Funcoes
 
 - (IBAction)iniciarEntrevista
 {
+    //remover antigas views;
+    [self removerViewsAntigas];
+    
     //Valida se os campos foram preenchidos
+    _intPageAtual = 0;
     if (_txtNome.text.length <= 0){
         [[Utils shared] mostrarAlerta:@"É obrigatório digitar o seu nome!"];
     } else if ([[Utils shared] validarEmail:_txtEmail.text] == FALSE){
         [[Utils shared] mostrarAlerta:@"É obrigatório digitar um e-mail válido!"];
     } else {
+        if (_candidatoAtual != nil){
+            [_candidatoAtual apagarCandidato];
+        }
         _candidatoAtual = [Candidatos adicionarCandidato:_txtNome.text comEmail:_txtEmail.text];
         [self criarEntrevista];
         
         //vai para a primeira página
-        _intPageAtual = 0;
         [self avancarEntrevista:nil];
     }
 }
 
 - (IBAction)cancelar:(id)sender
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_candidatoAtual apagarCandidato];
+    _intPageAtual = 0;
     [_pageControl removeFromSuperview];
     _pageControl = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -239,15 +251,28 @@
     _pageControl.currentPage = _intPageAtual ;
     [_pageControl updateCurrentPageDisplay];
 
+    NSLog(@"pagina = %d", _intPageAtual);
     _intPageAtual ++;
     CGRect frame = _scrvEntrevista.frame;
     frame.origin.x = frame.size.width * _intPageAtual + 1;
     frame.origin.y  = 0;
     [_scrvEntrevista scrollRectToVisible:frame animated:YES];
     if (_intPageAtual > ([_nsaConhecimentos count])){
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
         [self criarResumo];
+        _intPageAtual = 0;
     }
+    notification = nil;
 
+}
+
+- (void)removerViewsAntigas
+{
+    for (UIView *subview in [self.view subviews]) {
+        if (subview.tag >= 1000) {
+            [subview removeFromSuperview];
+        }
+    }
 }
 
 /*

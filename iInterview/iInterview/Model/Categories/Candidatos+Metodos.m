@@ -33,12 +33,7 @@
     if (candidato == nil) {
         return FALSE;
     }
-    
-    [candidato apagarConhecimentosCandidato ];
-
-    [[[CoreDataManager sharedManager] managedObjectContext] deleteObject:candidato];
-
-    [[CoreDataManager sharedManager] saveContext];
+    [candidato apagarCandidato];
     return TRUE;
 }
 
@@ -57,6 +52,28 @@
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"strNome" ascending:YES];
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
     [request setFetchBatchSize:20];
+    [[[CoreDataManager sharedManager] managedObjectContext]
+     executeFetchRequest:request error:nil];
+    
+    NSFetchedResultsController *frcResultado =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                        managedObjectContext:[[CoreDataManager sharedManager] managedObjectContext]
+                                          sectionNameKeyPath:nil
+                                                   cacheName:@"root"];
+    
+    NSError *error;
+    [frcResultado performFetch:&error];
+    return frcResultado;
+}
+
++ (NSFetchedResultsController *)buscarCandidatosAprovados:(NSString *)parGrupoConhecimento
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Candidatos"];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"strNome" ascending:YES];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+    [request setFetchBatchSize:20];
+    
+    
     [[[CoreDataManager sharedManager] managedObjectContext]
      executeFetchRequest:request error:nil];
     
@@ -95,4 +112,13 @@
     }
 }
 
+- (void)apagarCandidato
+{
+    
+    [self apagarConhecimentosCandidato ];
+    [self apagarConhecimentosCandidato];
+    [[[CoreDataManager sharedManager] managedObjectContext] deleteObject:self];
+    
+    [[CoreDataManager sharedManager] saveContext];
+}
 @end

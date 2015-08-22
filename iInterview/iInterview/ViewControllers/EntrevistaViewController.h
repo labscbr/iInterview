@@ -12,5 +12,6 @@
 @interface EntrevistaViewController : UIViewController
     <UITextFieldDelegate, UIScrollViewDelegate>
 
+- (void)removerViewsAntigas;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "UIViewConhecimento.h"
+#import "EntrevistaViewController.h"
+#import "Utils.h"
 
 #define COMPONENTRECT CGRectMake(45, 185, DK_SLIDER_SIZE-90, DK_SLIDER_SIZE-90)
 
@@ -14,6 +16,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame naPagina:(int)parPage comObjeto:(Conhecimentos *)parConhecimento {
     self = [super initWithFrame:frame];
+
+    self.tag=1002;
     
     [self setBackgroundColor:[UIColor clearColor]];
     
@@ -37,22 +41,36 @@
     
     float intIndex = screenHeight/480;
     int intX = (screenWidth - 230) / 2 ;
-    int intY = (screenHeight - 230) / 1.45  ;
+    int intY = (screenHeight - 230) / 1.45 - 10 ;
     
+    
+    UIView *viewFundo = [[UIView alloc] initWithFrame:CGRectMake(21,
+                                                                 65*intIndex,
+                                                                 screenWidth - 42,
+                                                                 360*intIndex)];
+    viewFundo.backgroundColor = [UIColor whiteColor];
+    
+    viewFundo = [[Utils shared] aplicarSombra:viewFundo];
+    
+    [self addSubview:viewFundo];
+
     _dkCSlider = [[DKCircularSlider alloc] initWithFrame:CGRectMake(intX,
-                                                                                     intY,
-                                                                                     DK_SLIDER_SIZE-90,
-                                                                                     DK_SLIDER_SIZE-90)
+                                                                    intY,
+                                                                    DK_SLIDER_SIZE-90,
+                                                                    DK_SLIDER_SIZE-90)
                                                                  usingMax:10
                                                                  usingMin:0
-                                                         withContentImage:[UIImage imageNamed:@"sensitivity"]
-                                                                withTitle:nil withTarget:self usingSelector:@selector(sliderChange:)];
+                                                         withContentImage:nil
+                                                                withTitle:nil
+                                                               withTarget:self
+                                                            usingSelector:@selector(sliderChange:)];
     _dkCSlider.currentValue = 10;
+    _dkCSlider.lblTitulo.textColor = [UIColor blackColor];
     [_dkCSlider movehandleToValue:10];
 
     [self addSubview:_dkCSlider];
 
-    UILabel *lblGrupoConhecimento = [[UILabel alloc] initWithFrame:CGRectMake(10,
+    UILabel *lblGrupoConhecimento = [[UILabel alloc] initWithFrame:CGRectMake(20,
                                                                               30*intIndex,
                                                                               screenWidth - 40,
                                                                               40*intIndex)];
@@ -61,12 +79,13 @@
     lblGrupoConhecimento.textAlignment = NSTextAlignmentCenter;
     lblGrupoConhecimento.font = [UIFont boldSystemFontOfSize:18*intIndex];
     lblGrupoConhecimento.textColor = [UIColor whiteColor];
+    lblGrupoConhecimento.backgroundColor = [UIColor darkGrayColor];
     lblGrupoConhecimento.minimumScaleFactor = 8.0f/14.0f;
     
     lblGrupoConhecimento.adjustsFontSizeToFitWidth = YES;
     lblGrupoConhecimento.numberOfLines = 0;
     
-    [self addSubview:lblGrupoConhecimento];
+    [self addSubview:[[Utils shared] aplicarSombra:lblGrupoConhecimento]];
     
     UILabel *lblConhecimento = [[UILabel alloc] initWithFrame:CGRectMake(20,
                                                                          65*intIndex,
@@ -76,7 +95,7 @@
     lblConhecimento.textAlignment = NSTextAlignmentCenter;
     lblConhecimento.font = [UIFont boldSystemFontOfSize:18*intIndex];
     
-    lblConhecimento.textColor = [UIColor whiteColor];
+    lblConhecimento.textColor = [UIColor blackColor];
     
     [self addSubview:lblConhecimento];
     
@@ -94,13 +113,20 @@
     lblConhecimento2.adjustsFontSizeToFitWidth = YES;
     lblConhecimento2.numberOfLines = 0;
     
-    lblConhecimento2.textColor = [UIColor whiteColor];
+    lblConhecimento2.textColor = [UIColor blackColor];
 
     [self addSubview:lblConhecimento2];
     
-   
+    UIView *viewFundo2 = [[UIView alloc] initWithFrame:CGRectMake(20,
+                                                                  screenHeight - 80 * intIndex,
+                                                                  screenWidth - 40,
+                                                                  50)];
+    viewFundo2.backgroundColor = [UIColor darkGrayColor];
+    viewFundo2 = [[Utils shared] aplicarSombra:viewFundo2];
+    [self addSubview:viewFundo2];
+    
     UIButton *btnProximo = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2,
-                                                                      screenHeight - 70,
+                                                                      screenHeight - 75 * intIndex,
                                                                       screenWidth/2,
                                                                       40)];
     [btnProximo addTarget:self action:@selector(avancar)
@@ -111,7 +137,7 @@
     [self addSubview:btnProximo];
     
     UIButton *btnCancelar = [[UIButton alloc] initWithFrame:CGRectMake(0,
-                                                                     screenHeight - 70,
+                                                                     screenHeight - 75 * intIndex,
                                                                      screenWidth/2,
                                                                      40)];
     [btnCancelar addTarget:self action:@selector(cancelar)

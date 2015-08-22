@@ -10,13 +10,16 @@
 #import "Candidatos+Metodos.h"
 #import "UICandidatoCell.h"
 #import "UIViewResumo.h"
+#import "EntrevistaViewController.h"
 
 @interface CandidatosViewController ()
 @property (weak, nonatomic) IBOutlet UILabel     *lblTitulo;
 @property (weak, nonatomic) IBOutlet UIButton    *btnAdicionar;
 @property (weak, nonatomic) IBOutlet UITableView *tbvCandidatos;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segFiltro;
 
 @property (strong, nonatomic) NSFetchedResultsController *nsfrcCandidatos;
+@property (weak, nonatomic) EntrevistaViewController *vcEntrevista;
 
 @end
 
@@ -26,10 +29,14 @@
 # pragma mark View LifeCycle
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    
     [_tbvCandidatos setHidden:YES];
     [_btnAdicionar setHidden:YES];
-    [super viewDidLoad];
+    [_segFiltro setHidden:YES];
+    
+    [self criarFiltro];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {
@@ -38,6 +45,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     if (_lblTitulo.tag != 2) {
     _lblTitulo.tag = _lblTitulo.frame.origin.y;
     _lblTitulo.frame = CGRectMake(_lblTitulo.frame.origin.x,
@@ -56,6 +64,7 @@
                      completion:^(BOOL finished){
                          [_tbvCandidatos setHidden:NO];
                          [_btnAdicionar setHidden:NO];
+                         [_segFiltro setHidden:NO];
                          _lblTitulo.tag = 2;
                      }];
     }
@@ -64,6 +73,28 @@
     [_tbvCandidatos reloadData];
 }
 
+
+# pragma mark -
+# pragma mark Funcoes
+
+- (void)criarFiltro
+{
+    NSArray *arrSegItens = [GrupoConhecimentos buscarArrayTodosGrupoConhecimentos];
+    for (int i=0; i< arrSegItens.count; i++){
+        GrupoConhecimentos *grupoConhecimento = [arrSegItens objectAtIndex:i];
+        [_segFiltro insertSegmentWithTitle:grupoConhecimento.strGrupoConhecimento atIndex:i+2 animated:NO];
+    }
+
+    [_segFiltro removeSegmentAtIndex:1 animated:NO];
+}
+
+
+- (IBAction)valueChanged:(UISegmentedControl *)segmentedControl {
+    
+    _nsfrcCandidatos = [Candidatos buscarTodosCandidatos];
+    [_tbvCandidatos reloadData];
+    
+}
 
 
 # pragma mark -
@@ -88,7 +119,7 @@
     Candidatos *candidato = [_nsfrcCandidatos objectAtIndexPath:indexPath];
     cell.candidato = candidato;
     
-    [cell desenharGraficos];
+    [cell desenharGraficosComFiltro:(_segFiltro.selectedSegmentIndex - 1)];
     
     return cell;
 }
@@ -123,6 +154,18 @@
         _nsfrcCandidatos = [Candidatos buscarTodosCandidatos];
         [tableView reloadData];
     } 
+}
+
+# pragma mark -
+# pragma mark Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (_vcEntrevista == nil){
+        _vcEntrevista = (EntrevistaViewController *)segue.destinationViewController;
+    }
+    [[NSNotificationCenter defaultCenter] removeObserver:_vcEntrevista];
+    [_vcEntrevista removerViewsAntigas];
 }
 
 @end

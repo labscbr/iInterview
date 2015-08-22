@@ -298,7 +298,7 @@ withRepresantationMode:(DKCircularSliderRepresantationMode)represantationMode
                                                                            fontSize.height+hFontOffset)];
     textField.font = font;
     textField.backgroundColor = [UIColor clearColor];
-    textField.textColor = [UIColor colorWithWhite:1 alpha:0.8];
+    textField.textColor = [UIColor blackColor];
     textField.textAlignment = NSTextAlignmentCenter;
     textField.enabled = NO;
     return textField;

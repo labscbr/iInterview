@@ -31,8 +31,8 @@
 
     NSData *retorno = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error ];
     
-    NSString* myString;
-    myString = [[NSString alloc] initWithData:retorno encoding:NSASCIIStringEncoding];
+//    NSString* myString;
+//    myString = [[NSString alloc] initWithData:retorno encoding:NSASCIIStringEncoding];
 //    NSLog(@"%@", myString);
     
     NSArray *arrRetorno;

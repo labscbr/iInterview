@@ -15,10 +15,14 @@
 
 + (Candidatos *)buscarCandidato:(NSString *)parStrEmail;
 
++ (NSFetchedResultsController *)buscarCandidatosAprovados:(NSString *)parGrupoConhecimento;
+
 + (BOOL)apagarCandidato:(NSString *)parStrEmail;
 
 + (NSFetchedResultsController *)buscarTodosCandidatos;
 
 - (float)calcularPontuacaoMedia:(GrupoConhecimentos *)parGrupoConhecimento;
+
+- (void)apagarCandidato;
 
 @end

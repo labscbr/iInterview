@@ -20,6 +20,7 @@
 
 - (void)apresentarResumo
 {
+    self.tag = 1002;
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     CGFloat screenWidth = screenSize.width;
