@@ -17,23 +17,11 @@
 - (instancetype)initWithFrame:(CGRect)frame naPagina:(int)parPage comObjeto:(Conhecimentos *)parConhecimento {
     self = [super initWithFrame:frame];
 
-    self.tag=1002;
+    self.tag = 1002;
     
     [self setBackgroundColor:[UIColor clearColor]];
     
-//    UISwipeGestureRecognizer *swipeUPGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUp)] ;
-////    swipeUPGesture.numberOfTouchesRequired = 1;
-//    swipeUPGesture.direction = UISwipeGestureRecognizerDirectionUp;
-//    
-//    [self addGestureRecognizer:swipeUPGesture];
-//
-//    UISwipeGestureRecognizer *swipeDownGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDown)] ;
-////    swipeDownGesture.numberOfTouchesRequired = 1;
-//    swipeDownGesture.direction = UISwipeGestureRecognizerDirectionDown;
-//    
-//    [self addGestureRecognizer:swipeDownGesture];
-
-    
+  
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     CGFloat screenWidth = screenSize.width;
@@ -160,8 +148,9 @@
 
 - (void)avancar
 {
-    NSNumber *message = [NSNumber numberWithInt:_dkCSlider.currentValue];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"AVANCAR" object:message];
+    EntrevistaViewController * vcEntrevista = self.delegate;
+    [vcEntrevista avancarEntrevista:_dkCSlider.currentValue];
+    
 }
 
 - (void)cancelar

@@ -437,6 +437,7 @@
 				TargetAttributes = {
 					1C96E1851B837A670047E182 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 46SS864887;
 					};
 					1C96E1A11B837A670047E182 = {
 						CreatedOnToolsVersion = 6.4;
@@ -661,6 +662,7 @@
 			baseConfigurationReference = 56FE6DAD1759C622E7A659FC /* Pods-iInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iInterview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,6 +677,7 @@
 			baseConfigurationReference = D493F9FF064E25B94B88E1BF /* Pods-iInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iInterview/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -13,5 +13,6 @@
     <UITextFieldDelegate, UIScrollViewDelegate>
 
 - (void)removerViewsAntigas;
+- (void)avancarEntrevista:(int)numPotuacao;
 
 @end

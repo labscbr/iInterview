@@ -7,6 +7,7 @@
 //
 
 #import "UICandidatoCell.h"
+#import "CandidatosViewController.h"
 #import "MDRadialProgressView.h"
 #import "Utils.h"
 
@@ -33,36 +34,39 @@
     
     NSArray *nsaGrupoConhecimento = [GrupoConhecimentos buscarArrayTodosGrupoConhecimentos];
 
+    _nsmaResultados = [[NSMutableArray alloc] init];
+    
     [nsaGrupoConhecimento enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         GrupoConhecimentos *parGrupoConhecimentoAtual = obj;
         float fltMedia = [_candidato calcularPontuacaoMedia:parGrupoConhecimentoAtual];
         if (intFiltro == idx && fltMedia < 7){
-            [self setHidden:YES];
+            [_nsmaResultados addObject:@"0"];
         } else {
-            int intX = (screenWidth/(nsaGrupoConhecimento.count+1) + 25) * idx + 40;
-            UILabel *lblConhecimento = [[UILabel alloc] initWithFrame:CGRectMake(intX-25,
-                                                                                 70,
-                                                                                 100,
-                                                                                 20)];
-            lblConhecimento.text = [NSString stringWithFormat:@"%@ - %0.0f",
-                                    parGrupoConhecimentoAtual.strGrupoConhecimento,
-                                    fltMedia];
-            lblConhecimento.textAlignment = NSTextAlignmentCenter;
-            lblConhecimento.font = [UIFont boldSystemFontOfSize:12];
-            lblConhecimento.textColor = [UIColor blackColor];
-            lblConhecimento.tag = 1000;
-            
-            CGRect frame = CGRectMake(intX, 95, 50, 50);
-            MDRadialProgressView *radialView5 = (MDRadialProgressView *)[[Utils shared] gerarGrafico:frame comMedia:fltMedia];
-            radialView5.tag = 1001;
-            
-            [self addSubview:radialView5];
-            [self addSubview:lblConhecimento];
+            [_nsmaResultados addObject:@"1"];
         }
+        int intX = (screenWidth/(nsaGrupoConhecimento.count+1) + 25) * idx + 40;
+        UILabel *lblConhecimento = [[UILabel alloc] initWithFrame:CGRectMake(intX-25,
+                                                                             70,
+                                                                             100,
+                                                                             20)];
+        lblConhecimento.text = [NSString stringWithFormat:@"%@ - %0.0f",
+                                parGrupoConhecimentoAtual.strGrupoConhecimento,
+                                fltMedia];
+        lblConhecimento.textAlignment = NSTextAlignmentCenter;
+        lblConhecimento.font = [UIFont boldSystemFontOfSize:12];
+        lblConhecimento.textColor = [UIColor blackColor];
+        lblConhecimento.tag = 1000;
+        
+        CGRect frame = CGRectMake(intX, 95, 50, 50);
+        MDRadialProgressView *radialView5 = (MDRadialProgressView *)[[Utils shared] gerarGrafico:frame comMedia:fltMedia];
+        radialView5.tag = 1001;
+        
+        [self addSubview:radialView5];
+        [self addSubview:lblConhecimento];
         
         
     }];
-
 }
+
 @end

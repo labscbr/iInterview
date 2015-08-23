@@ -19,7 +19,9 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segFiltro;
 
 @property (strong, nonatomic) NSFetchedResultsController *nsfrcCandidatos;
+@property (strong, nonatomic) NSMutableArray *nsmaResultados;
 @property (weak, nonatomic) EntrevistaViewController *vcEntrevista;
+
 
 @end
 
@@ -35,6 +37,8 @@
     [_tbvCandidatos setHidden:YES];
     [_btnAdicionar setHidden:YES];
     [_segFiltro setHidden:YES];
+    
+    _nsmaResultados = [[NSMutableArray alloc] init];
     
     [self criarFiltro];
 }
@@ -93,7 +97,10 @@
     
     _nsfrcCandidatos = [Candidatos buscarTodosCandidatos];
     [_tbvCandidatos reloadData];
-    
+//    for (int i=0; i < _nsfrcCandidatos.fetchedObjects.count; i++){
+//        UICandidatoCell *cell =
+//        [_tbvCandidatos deleteRowsAtIndexPaths: withRowAnimation:UITableViewRowAnimationFade];
+//    }
 }
 
 
@@ -118,10 +125,31 @@
     
     Candidatos *candidato = [_nsfrcCandidatos objectAtIndexPath:indexPath];
     cell.candidato = candidato;
+    cell.delegate = cell;
     
-    [cell desenharGraficosComFiltro:(_segFiltro.selectedSegmentIndex - 1)];
+    [cell desenharGraficosComFiltro:(int)(_segFiltro.selectedSegmentIndex - 1)];
+    
+    [_nsmaResultados insertObject:cell.nsmaResultados atIndex:indexPath.row];
     
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat height = 162;
+    
+    if (_segFiltro.selectedSegmentIndex > 0) {
+        NSMutableArray *nsmaResultadoAtual = [_nsmaResultados objectAtIndex:indexPath.row];
+        NSString *strResultado = [nsmaResultadoAtual objectAtIndex:(_segFiltro.selectedSegmentIndex - 1)];
+        
+        if ([strResultado isEqualToString:@"0"])
+        {
+            height = 0;
+        }
+        
+    }
+    
+    return height;
 }
 
 # pragma mark -
@@ -164,8 +192,6 @@
     if (_vcEntrevista == nil){
         _vcEntrevista = (EntrevistaViewController *)segue.destinationViewController;
     }
-    [[NSNotificationCenter defaultCenter] removeObserver:_vcEntrevista];
-    [_vcEntrevista removerViewsAntigas];
 }
 
 @end

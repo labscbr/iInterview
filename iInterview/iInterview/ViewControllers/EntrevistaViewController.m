@@ -50,12 +50,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(avancarEntrevista:)
-                                                 name:@"AVANCAR"
-                                               object:nil];
     [self setNeedsStatusBarAppearanceUpdate];
-    [super viewDidLoad];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {
@@ -64,10 +59,6 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-}
- - (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)viewDidLayoutSubviews
@@ -86,11 +77,6 @@
 
 # pragma mark -
 # pragma mark TextField Delegate
-
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-//    [textField resignFirstResponder];
-//    return TRUE;
-//}
 
 -(BOOL)textFieldShouldReturn:(UITextField*)textField
 {
@@ -192,23 +178,11 @@
 # pragma mark -
 # pragma mark ScrollView Delegate
 
-//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-//}
-//
-//-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-//{
-////    int page = _scrvEntrevista.contentOffset.x/_scrvEntrevista.frame.size.width;
-////    _pageControl.currentPage = page;
-//}
-
 # pragma mark -
 # pragma mark Botoes e Funcoes
 
 - (IBAction)iniciarEntrevista
 {
-    //remover antigas views;
-    [self removerViewsAntigas];
-    
     //Valida se os campos foram preenchidos
     _intPageAtual = 0;
     if (_txtNome.text.length <= 0){
@@ -223,29 +197,28 @@
         [self criarEntrevista];
         
         //vai para a primeira página
-        [self avancarEntrevista:nil];
+        [self avancarEntrevista:0];
     }
 }
 
 - (IBAction)cancelar:(id)sender
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_candidatoAtual apagarCandidato];
     _intPageAtual = 0;
     [_pageControl removeFromSuperview];
     _pageControl = nil;
+    [self removerViewsAntigas];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)avancarEntrevista:(NSNotification *) notification
+- (void)avancarEntrevista:(int)numPotuacao
 {
-    if ([notification.object isKindOfClass:[NSNumber class]] && _intPageAtual >= 1)
+    if (_intPageAtual >= 1)
     {
-        NSNumber *numPontuacao = (NSNumber *)notification.object;
         Conhecimentos *conhecimentoAtual = [_nsaConhecimentos objectAtIndex:_intPageAtual - 1];
         CandidatoConhecimento *candidatoConhecimentoAtual = [CandidatoConhecimento adicionarCandidato:_candidatoAtual
                                                                                       comConhecimento:conhecimentoAtual];
-        [candidatoConhecimentoAtual definirPontuacaoConhecimento:[numPontuacao intValue]];
+        [candidatoConhecimentoAtual definirPontuacaoConhecimento:numPotuacao];
     }
 
     _pageControl.currentPage = _intPageAtual ;
@@ -258,20 +231,16 @@
     frame.origin.y  = 0;
     [_scrvEntrevista scrollRectToVisible:frame animated:YES];
     if (_intPageAtual > ([_nsaConhecimentos count])){
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
         [self criarResumo];
         _intPageAtual = 0;
     }
-    notification = nil;
 
 }
 
 - (void)removerViewsAntigas
 {
     for (UIView *subview in [self.view subviews]) {
-        if (subview.tag >= 1000) {
             [subview removeFromSuperview];
-        }
     }
 }
 

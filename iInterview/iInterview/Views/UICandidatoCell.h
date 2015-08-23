@@ -18,6 +18,9 @@
 
 @property (weak, nonatomic) Candidatos *candidato;
 @property (assign, nonatomic) int intGrupoConhecimento;
+@property (strong, nonatomic) NSMutableArray *nsmaResultados;
+
+@property id delegate;
 
 - (void)desenharGraficosComFiltro:(int)intFiltro;
 
